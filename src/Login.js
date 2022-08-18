@@ -9,7 +9,7 @@ function Login({search}){
    let [email,upEmail] =useState(" ");
    let [users,edit] =useState([]);
    let [pass,upPass] = useState(" ");
-   let[err,find] =useState(false);
+  // let[err,find] =useState(false);
    let navigate =useNavigate();
 
    useEffect(()=>{
@@ -26,7 +26,7 @@ function Login({search}){
 		console.log("Email is " + email);
 		console.log("Password is " + pass);
 		event.preventDefault();
-		let result = users.filter((user)=> (user.email ==email && user.password ===pass));
+		let result = users.filter((user)=> (user.email ===email && user.password ===pass));
     if(result.length >0){
     search(result[0]);
     navigate("/")

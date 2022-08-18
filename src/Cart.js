@@ -20,7 +20,7 @@ if(parseInt(id) === item.id){
 }
 }
 y();
-},[])
+},[id])
 return (<div>
 <Navbar logged={false} form={true}/>
 <div class="MyCart-c">
@@ -33,7 +33,7 @@ return (<div>
  	<br/>
  	<div class="flex">
  	<div>
-   <div class='img-conte'><img src={item.image}/></div>
+   <div class='img-conte'><img alt='text' src={item.image}/></div>
    </div>
    <div>
    <h3>{item.title}</h3>
