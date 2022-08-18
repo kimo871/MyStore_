@@ -43,7 +43,7 @@ function App() {
     const y = await API.getAll();
     console.log(y.record);
     list(y.record.products);
-    update(y.record.products)
+  
         }
    u();
 
