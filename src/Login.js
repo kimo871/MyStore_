@@ -36,6 +36,12 @@ function Login({search}){
 	}
 return (<>
 <Navbar logged={false} form={true}/>
+{err && (
+<div className='err-cont'>
+<h4>Email or Password Not Correct</h4>
+</div>
+  )}
+<br>
 <div className="Container">
 <div className="form">
 <h1><center>Login To Your Shop Account.</center></h1>
