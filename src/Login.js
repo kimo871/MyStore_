@@ -27,7 +27,7 @@ function Login({search}){
 		console.log("Email is " + email);
 		console.log("Password is " + pass);
 		event.preventDefault();
-		let result = users.filter((user)=> (user.email ===email && user.password ===pass));
+		let result = users.filter((user)=> (user.email.trim() === email.trim() && user.password.trim() ===pass.trim()));
     if(result.length >0){
     search(result[0]);
     find(false);
