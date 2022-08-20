@@ -1,13 +1,16 @@
 import Navbar from './Navbar';
+import Footer from './Footer';
 import {useEffect , useState} from 'react';
 import  "./index.css";
+import {useLocation} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHandshake} from '@fortawesome/free-solid-svg-icons';
-import {IconButton,Button} from '@mui/material';
-import {ShoppingCart,Favorite} from '@mui/icons-material';
+import {IconButton,Badge,Button} from '@mui/material';
+import {ShoppingCart,Favorite,Login} from '@mui/icons-material';
 import *  as API from './Api';
 function Home({user,logged,Products}){
   let [userd,state]= useState(user);
+  let [show , define] = useState(false);
   useEffect(()=>{
    console.log(user);
   })
@@ -20,7 +23,7 @@ function Home({user,logged,Products}){
         if(y === type){
           let n = user_x[0][type].filter((item)=> item.id === product.id)
          n.length > 0 ? user_x[0][type].map((item)=>{
-          if(item.id === product.id){return product}
+          if(item.id == product.id){return product}
             else{return item}
          }): user_x[0][y].push(product);
          users.record.Users = users.record.Users.map((item)=>{
@@ -55,10 +58,15 @@ return (
       )}
 
         <center>
+        
+        <div class="input">
       <input className="input" placeholder="Search By Product Name , Category.." type="text" />
+      </div>
+      <br/>
+      <div class="btns">
       <Button  type="submit" variant="contained" color="primary">Apply</Button>&nbsp;&nbsp;
       <Button variant="contained" color="primary">Reset</Button>
-    
+      </div>
       </center>
           <div className="m-3 box-container">
       <h2>Featured Products</h2>
@@ -94,7 +102,7 @@ return (
       </div>
       </div>
       </div>
-
+  <Footer/>
 </div>
 )	
 

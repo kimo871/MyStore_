@@ -1,6 +1,7 @@
 import './index.css';
 import *  as API from './Api';
 import React from 'react';
+import Footer from './Footer';
 import {useNavigate} from 'react-router-dom';
 import {useState ,useEffect} from 'react';
 import Navbar from './Navbar';
@@ -26,7 +27,7 @@ function Login({search}){
 		console.log("Email is " + email);
 		console.log("Password is " + pass);
 		event.preventDefault();
-		let result = users.filter((user)=> (user.email ===email && user.password ===pass));
+		let result = users.filter((user)=> (user.email ==email && user.password ===pass));
     if(result.length >0){
     search(result[0]);
     find(false);
@@ -36,8 +37,7 @@ function Login({search}){
     return result;
  
 	}
-return (
-  <div>
+return (<>
 <Navbar logged={false} form={true}/>
 {err && (
 	<center>
@@ -68,7 +68,8 @@ return (
   </form>
 </div>
 </div>
-</div>
+<Footer/>
+</>
 )	
 
 }
