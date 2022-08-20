@@ -11,7 +11,7 @@ import {Routes,Route} from 'react-router-dom';
 function App() {
   
 	let [products,list] = useState([]);
-	let [value,setQuery] = useState('');
+	//let [value,setQuery] = useState('');
   //  let [prs,update] = useState([]);
     let[logged,change] =useState(false);
     let[user,u]=useState({});
