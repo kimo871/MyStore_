@@ -16,12 +16,14 @@ function Navbar({user,logged,form}){
       </Badge>
       </IconButton>
       </Link>
-
+       
+      <Link to={'/fav/'+user.id}>
       <IconButton aria-label="cart">
       <Badge badgeContent={user.favorites.length.toString()} color="primary" aria-label="cart">
       <Favorite className="icon"/>
       </Badge>
       </IconButton>
+      </Link>
 
        <IconButton aria-label="cart">
     <Link to="/login"><Logout className="icon"/></Link>
