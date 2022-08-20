@@ -2,8 +2,8 @@ import React from 'react';
 import {useParams} from 'react-router-dom';
 import Footer from './Footer';
 import {useEffect , useState} from 'react';
-import {IconButton,Badge,Button} from '@mui/material';
-import {ShoppingCart,Favorite,Login,Delete} from '@mui/icons-material';
+import {IconButton} from '@mui/material';
+import {Delete} from '@mui/icons-material';
 import * as API from './Api';
 import Navbar from './Navbar';
 function Cart(){
@@ -51,7 +51,7 @@ return (<div>
  	<br/>
  	<div class="flex">
  	<div>
-   <div class='img-conte'><img src={item.image}/></div>
+   <div class='img-conte'><img alt='text' src={item.image}/></div>
    </div>
    <div>
    <h3>{item.title}</h3>

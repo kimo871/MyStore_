@@ -3,13 +3,13 @@ import {useParams} from 'react-router-dom';
 import {useEffect} from 'react';
 import {useState} from 'react';
 import Footer from './Footer';
-import {IconButton,Button} from '@mui/material';
+import {IconButton} from '@mui/material';
 import {Delete} from '@mui/icons-material';
 import * as API from './Api';
 import Navbar from './Navbar';
 function Fav(){
 let [user,edit] = useState(undefined);
-let[users,i]=useState(undefined);
+//let[users,i]=useState(undefined);
 const {id} = useParams();
 
 useEffect(()=>{
@@ -56,7 +56,7 @@ return (<div>
  	<br/>
  	<div class="flex">
  	<div>
-   <div class='img-conte'><img src={item.image}/></div>
+   <div class='img-conte'><img alt='text' src={item.image}/></div>
    </div>
    <div>
    <h3>{item.title}</h3>

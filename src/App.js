@@ -6,17 +6,16 @@ import Fav from './Fav';
 import { useEffect , useState  } from 'react';
 import *  as API from './Api';
 import {Routes,Route} from 'react-router-dom';
-import {IconButton,Button} from '@mui/material';
-import {ShoppingCart,Favorite} from '@mui/icons-material';
+
 
 function App() {
   
 	let [products,list] = useState([]);
 	let [value,setQuery] = useState('');
-    let [prs,update] = useState([]);
+  //  let [prs,update] = useState([]);
     let[logged,change] =useState(false);
     let[user,u]=useState({});
-
+/*
 	function Submit(e) {
     console.log("Name value: " + value);
     e.preventDefault();
@@ -36,6 +35,8 @@ function App() {
     u(data);
   }
 
+
+*/
 
 
   useEffect(()=>{
